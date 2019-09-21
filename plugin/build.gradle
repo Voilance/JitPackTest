@@ -1,0 +1,15 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+sourceCompatibility = "8"
+targetCompatibility = "8"
+
+dependencies {
+    implementation gradleApi()
+    implementation 'com.android.tools.build:gradle:3.2.0'
+    implementation project(':tool-base')
+}
+
+if (rootProject.ext.DEBUG) {
+    apply from: '../gradle/local_nexus/plugin.gradle'
+}

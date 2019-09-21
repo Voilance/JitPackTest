@@ -1,0 +1,3 @@
+include ':plugin', ':tool-base', ':lib-log', ':tool-log'
+
+rootProject.name='JitPackTest'
