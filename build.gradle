@@ -14,11 +14,6 @@ buildscript {
     }
 }
 
-ext {
-    DEBUG = false
-    GROUP = "com.voilance.jitpacktest"
-    VERSION = "0.4"
-}
 
 allprojects {
     repositories {
@@ -27,12 +22,12 @@ allprojects {
     }
 }
 
+ext.DEBUG = false
 subprojects {
+    group = 'com.github.Voilance'
     if (rootProject.ext.DEBUG) {
-        group = rootProject.ext.GROUP
-        version = rootProject.ext.VERSION
+        version = 0.1
     } else {
-        group = 'com.github.Voilance'
         apply plugin: 'com.github.dcendents.android-maven'
     }
 }
