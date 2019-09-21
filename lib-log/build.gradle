@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
 
 android {
     compileSdkVersion 29
@@ -14,5 +13,6 @@ android {
 }
 
 if (rootProject.ext.DEBUG) {
+    apply plugin: 'maven'
     apply from: '../gradle/local_nexus/lib-log.gradle'
 }

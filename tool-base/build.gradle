@@ -1,5 +1,4 @@
 apply plugin: 'java'
-apply plugin: 'maven'
 
 sourceCompatibility = "8"
 targetCompatibility = "8"
@@ -10,5 +9,6 @@ dependencies {
 }
 
 if (rootProject.ext.DEBUG) {
+    apply plugin: 'maven'
     apply from: '../gradle/local_nexus/tool-base.gradle'
 }
